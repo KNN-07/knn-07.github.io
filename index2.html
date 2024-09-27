@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animated Profile Page</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" crossorigin="anonymous"></script>
+    <link href="https://cdn.tailwindcss.com" rel="stylesheet">
+    <style>
+        /* Custom blur for background */
+        .bg-blur {
+            background-image: url('/mnt/data/image.png'); /* Set your image path */
+            background-size: cover;
+            background-position: center;
+            filter: blur(8px);
+        }
+
+        /* Entrance Animation (like in Carrd) */
+        @keyframes slideIn {
+            0% {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .slide-in {
+            animation: slideIn 1.5s ease-out forwards;
+        }
+
+        /* Delay animation for staggered effect */
+        .delay-1 {
+            animation-delay: 0.3s;
+        }
+
+        .delay-2 {
+            animation-delay: 0.6s;
+        }
+
+        .delay-3 {
+            animation-delay: 0.9s;
+        }
+
+        /* Hover effect for social icons */
+        .social-icon:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease;
+        }
+
+        /* Styling for small logo */
+        .small-logo {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            width: 50px;
+            height: 50px;
+        }
+    </style>
+</head>
+
+<body class="bg-gray-100 relative">
+
+    <!-- Blurred Background Image -->
+    <div class="absolute inset-0 bg-blur"></div>
+
+    <!-- Profile Section -->
+    <div class="relative z-10 flex items-center justify-center min-h-screen bg-opacity-70 bg-gray-200">
+        <div class="bg-white bg-opacity-80 shadow-lg rounded-lg p-8 max-w-5xl w-full flex flex-col lg:flex-row justify-between space-x-0 lg:space-x-8 space-y-8 lg:space-y-0">
+
+            <!-- Left Column (Profile Info) -->
+            <div class="w-full lg:w-1/2 text-center lg:text-left slide-in delay-1">
+                <h1 class="text-4xl font-bold text-gray-800 mb-2">normalperson</h1>
+                <h2 class="text-xl font-semibold text-green-600 mb-4">Nguyễn Khắc Trung Kiên</h2>
+                <p class="text-gray-700 mb-2">Competitive Programmer</p>
+                <p class="text-gray-700 mb-2">Newbie in Web Dev and CyberSec</p>
+                <p class="text-gray-700 mb-2">Anime Editor / VFX Editor</p>
+                <p class="text-gray-700 mb-2">Beginner Self-taught (Anime) Pianist</p>
+                <p class="text-gray-700 mb-2">Currently studying Digital Arts</p>
+            </div>
+
+            <!-- Right Column (Social Links) -->
+            <div class="w-full lg:w-1/2 grid grid-cols-2 gap-4 slide-in delay-2">
+                <!-- Facebook -->
+                <a href="#" class="flex items-center bg-blue-100 rounded-full p-3 text-gray-700 social-icon">
+                    <i class="fab fa-facebook-f fa-lg mr-2"></i> Facebook
+                </a>
+                <!-- Reddit -->
+                <a href="#" class="flex items-center bg-blue-100 rounded-full p-3 text-gray-700 social-icon">
+                    <i class="fab fa-reddit fa-lg mr-2"></i> Reddit
+                </a>
+                <!-- Instagram -->
+                <a href="#" class="flex items-center bg-blue-100 rounded-full p-3 text-gray-700 social-icon">
+                    <i class="fab fa-instagram fa-lg mr-2"></i> Instagram
+                </a>
+                <!-- Codeforces -->
+                <a href="#" class="flex items-center bg-blue-100 rounded-full p-3 text-gray-700 social-icon">
+                    <i class="fas fa-chart-bar fa-lg mr-2"></i> Codeforces
+                </a>
+                <!-- Twitter -->
+                <a href="#" class="flex items-center bg-blue-100 rounded-full p-3 text-gray-700 social-icon">
+                    <i class="fab fa-twitter fa-lg mr-2"></i> Twitter
+                </a>
+                <!-- YouTube -->
+                <a href="#" class="flex items-center bg-blue-100 rounded-full p-3 text-gray-700 social-icon">
+                    <i class="fab fa-youtube fa-lg mr-2"></i> YouTube
+                </a>
+                <!-- GitHub -->
+                <a href="#" class="flex items-center bg-blue-100 rounded-full p-3 text-gray-700 social-icon">
+                    <i class="fab fa-github fa-lg mr-2"></i> GitHub
+                </a>
+                <!-- ArtStation -->
+                <a href="#" class="flex items-center bg-blue-100 rounded-full p-3 text-gray-700 social-icon">
+                    <i class="fab fa-artstation fa-lg mr-2"></i> ArtStation
+                </a>
+                <!-- GitLab -->
+                <a href="#" class="flex items-center bg-blue-100 rounded-full p-3 text-gray-700 social-icon">
+                    <i class="fab fa-gitlab fa-lg mr-2"></i> GitLab
+                </a>
+                <!-- DeviantArt -->
+                <a href="#" class="flex items-center bg-blue-100 rounded-full p-3 text-gray-700 social-icon">
+                    <i class="fab fa-deviantart fa-lg mr-2"></i> DeviantArt
+                </a>
+                <!-- Email -->
+                <a href="#" class="flex items-center bg-blue-100 rounded-full p-3 text-gray-700 social-icon">
+                    <i class="fas fa-envelope fa-lg mr-2"></i> Email
+                </a>
+                <!-- AniList -->
+                <a href="#" class="flex items-center bg-blue-100 rounded-full p-3 text-gray-700 social-icon">
+                    <i class="fas fa-book fa-lg mr-2"></i> AniList
+                </a>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+
+</html>
