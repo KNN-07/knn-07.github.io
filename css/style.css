@@ -50,17 +50,65 @@ header {
 
 nav {
   margin-top: 12px;
+  /* make the nav act like a small rounded tab bar */
+  display: inline-flex;
+  gap: 8px;
+  padding: 6px;
+  background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(0,0,0,0.06));
+  border-radius: 18px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.22), inset 0 1px rgba(255,255,255,0.02);
 }
 nav a {
   color: var(--text);
   text-decoration: none;
-  margin: 0 18px;
-  font-weight: 500;
-  font-size: 1.05rem;
-  transition: color 0.2s;
+  margin: 0;
+  font-weight: 600;
+  font-size: 1.02rem;
+  transition: color 0.18s ease, transform 0.18s ease, box-shadow 0.18s ease;
+  display: inline-block;
+  padding: 8px 16px;
+  border-radius: 12px 12px 8px 8px; /* curved top corners for tab look */
+  background: transparent;
+  position: relative;
 }
 nav a:hover {
   color: var(--accent);
+  transform: translateY(-3px);
+}
+/* Active (selected) tab */
+nav a.active {
+  background: linear-gradient(180deg, rgba(255,255,255,0.03), rgba(0,0,0,0.08));
+  color: var(--label);
+  box-shadow: 0 8px 18px rgba(0,0,0,0.28);
+  transform: translateY(-6px);
+}
+/* subtle glossy highlight on tabs */
+nav a::before {
+  content: '';
+  position: absolute;
+  left: 8px;
+  right: 8px;
+  top: 6px;
+  height: 6px;
+  border-radius: 6px;
+  background: linear-gradient(180deg, rgba(255,255,255,0.18), rgba(255,255,255,0.02));
+  opacity: 0.06;
+  pointer-events: none;
+}
+/* reduce gloss for active so it looks inset */
+nav a.active::before { opacity: 0.03; }
+
+/* Light mode tweaks: brighter tab bar and darker text */
+body.light-mode header nav {
+  background: linear-gradient(180deg, rgba(255,255,255,0.6), rgba(0,0,0,0.02));
+  box-shadow: 0 6px 18px rgba(0,0,0,0.06), inset 0 1px rgba(255,255,255,0.6);
+}
+body.light-mode nav a {
+  color: var(--subtitle);
+}
+body.light-mode nav a.active {
+  background: linear-gradient(180deg, rgba(255,255,255,0.9), rgba(240,240,240,0.9));
+  color: var(--label);
 }
 
 .container {
