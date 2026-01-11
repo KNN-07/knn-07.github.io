@@ -50,7 +50,6 @@ header {
 
 nav {
   margin-top: 12px;
-  /* make the nav act like a small rounded tab bar */
   display: inline-flex;
   gap: 8px;
   padding: 6px;
@@ -67,7 +66,7 @@ nav a {
   transition: color 0.18s ease, transform 0.18s ease, box-shadow 0.18s ease;
   display: inline-block;
   padding: 8px 16px;
-  border-radius: 12px 12px 8px 8px; /* curved top corners for tab look */
+  border-radius: 12px 12px 8px 8px;
   background: transparent;
   position: relative;
 }
@@ -75,14 +74,12 @@ nav a:hover {
   color: var(--accent);
   transform: translateY(-3px);
 }
-/* Active (selected) tab */
 nav a.active {
   background: linear-gradient(180deg, rgba(255,255,255,0.03), rgba(0,0,0,0.08));
   color: var(--label);
   box-shadow: 0 8px 18px rgba(0,0,0,0.28);
   transform: translateY(-6px);
 }
-/* subtle glossy highlight on tabs */
 nav a::before {
   content: '';
   position: absolute;
@@ -95,10 +92,8 @@ nav a::before {
   opacity: 0.06;
   pointer-events: none;
 }
-/* reduce gloss for active so it looks inset */
 nav a.active::before { opacity: 0.03; }
 
-/* Light mode tweaks: brighter tab bar and darker text */
 body.light-mode header nav {
   background: linear-gradient(180deg, rgba(255,255,255,0.6), rgba(0,0,0,0.02));
   box-shadow: 0 6px 18px rgba(0,0,0,0.06), inset 0 1px rgba(255,255,255,0.6);
@@ -241,7 +236,6 @@ section {
 .contact-list li {
   margin: 0;
 }
-/* Publications Section */
 .publications-list {
   display: flex;
   flex-direction: column;
@@ -295,8 +289,6 @@ section {
   font-size: 0.8rem;
   border-radius: 6px;
 }
-
-/* CV Section */
 .cv-container {
   display: flex;
   flex-direction: column;
@@ -357,8 +349,6 @@ section {
   color: var(--contact-label);
   line-height: 1.5;
 }
-
-/* Skills */
 .skill-category {
   margin-bottom: 16px;
 }
@@ -388,40 +378,178 @@ section {
   border-color: var(--accent);
 }
 
-@media (max-width: 600px) {
-  .cv-item {
-    flex-direction: column;
-    gap: 4px;
-    margin-bottom: 20px;
-  }
-  .cv-date {
-    text-align: left;
-    min-width: auto;
-    font-size: 0.85rem;
-    color: var(--accent);
-    margin-bottom: 4px;
-  }
-  .cv-section::before {
-    display: none;
-  }
-  .cv-section {
-    padding-left: 0;
+@media (max-width: 900px) {
+  .container {
+    max-width: 95%;
+    margin-top: 24px;
+    margin-bottom: 24px;
   }
 }
 
 @media (max-width: 700px) {
   .container {
-    padding: 24px 6px;
+    padding: 32px 20px;
   }
   .section-title {
-    font-size: 1.1rem;
+    font-size: 1.25rem;
   }
   h1.style3 {
-    font-size: 1.3rem;
+    font-size: 1.5rem;
   }
 }
 
-/* Light mode overrides */
+@media (max-width: 600px) {
+  header {
+    padding-bottom: 12px;
+    overflow-x: hidden;
+  }
+  
+  h1.style3 {
+    font-size: 1.4rem;
+    padding: 0 50px;
+    line-height: 1.3;
+  }
+
+  .mode-toggle {
+    width: 48px;
+    height: 48px;
+    top: 8px;
+    right: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+  }
+  .mode-toggle:hover, .mode-toggle:active {
+    background: var(--button-hover);
+  }
+
+  nav {
+    display: flex;
+    width: 100%;
+    box-sizing: border-box;
+    overflow-x: auto;
+    white-space: nowrap;
+    justify-content: flex-start;
+    padding: 12px 16px;
+    gap: 12px;
+    background: transparent;
+    box-shadow: none;
+    border-radius: 0;
+    margin-top: 8px;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+  nav::-webkit-scrollbar {
+    display: none;
+  }
+  
+  nav a {
+    flex: 0 0 auto;
+    padding: 10px 20px;
+    font-size: 0.95rem;
+    background: var(--button-bg);
+    color: var(--label);
+    border-radius: 24px;
+    min-height: 44px;
+    box-sizing: border-box;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  }
+  
+  nav a.active {
+    background: var(--accent);
+    color: #fff !important;
+    transform: none;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  }
+  
+  nav a::before {
+    display: none;
+  }
+  
+  .cv-item {
+    flex-direction: column;
+    gap: 6px;
+    margin-bottom: 24px;
+  }
+  .cv-date {
+    text-align: left;
+    min-width: auto;
+    font-size: 0.9rem;
+    color: var(--accent);
+    margin-bottom: 4px;
+    font-weight: 600;
+  }
+  .cv-section {
+    padding-left: 0;
+    margin-left: 0;
+  }
+  .cv-section::before {
+    display: none;
+  }
+  
+  .projects-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+  
+  .project-card {
+    min-height: auto;
+  }
+  
+  .pub-actions {
+    flex-wrap: wrap;
+    margin-top: 12px;
+  }
+  .pub-actions .button {
+    flex: 1;
+    justify-content: center;
+    min-height: 44px;
+  }
+  
+  .button {
+    min-height: 48px;
+    padding: 10px 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 24px 16px;
+    margin-top: 0;
+    border-radius: 0;
+    box-shadow: none;
+  }
+  
+  h1.style3 {
+    font-size: 1.25rem;
+  }
+  
+  .buttons, .contact-list {
+    flex-direction: column;
+    width: 100%;
+    align-items: stretch;
+  }
+  
+  .buttons li, .contact-list li {
+    width: 100%;
+    margin: 0;
+  }
+  
+  .button {
+    width: 100%;
+    justify-content: center;
+  }
+  
+  .pub-card, .project-card {
+    padding: 20px 16px;
+  }
+}
+
 body.light-mode {
   --bg: #f6f8fa;
   --container-bg: #fff;
@@ -437,7 +565,6 @@ body.light-mode {
   --contact-label: #181a20;
 }
 
-/* Loader overlay styles */
 #loader-overlay {
   position: fixed;
   z-index: 9999;
@@ -464,7 +591,6 @@ body.light-mode {
   to { transform: rotate(360deg); }
 }
 
-/* Fade-in-up animation for content */
 .fade-in-up {
   opacity: 0;
   transform: translateY(32px);
