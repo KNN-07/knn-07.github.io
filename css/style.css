@@ -548,11 +548,14 @@ section {
     flex-direction: column;
     width: 100%;
     align-items: center;
+    justify-content: center;
   }
   
   .buttons li, .contact-list li {
     width: 80%;
     margin: 0;
+    display: flex;
+    justify-content: center;
   }
   
   .button {
