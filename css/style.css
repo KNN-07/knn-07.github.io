@@ -322,7 +322,9 @@ section {
   margin-bottom: 24px;
 }
 .cv-date {
-  min-width: 120px;
+  min-width: 160px;
+  width: 160px;
+  flex-shrink: 0;
   font-size: 0.9rem;
   color: var(--subtitle);
   text-align: right;
