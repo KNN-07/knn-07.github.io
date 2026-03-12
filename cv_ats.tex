@@ -1,0 +1,122 @@
+\documentclass[11pt,a4paper]{article}
+
+\usepackage[utf8]{inputenc}
+% Use T5 font encoding to properly render Vietnamese characters in pdflatex
+\usepackage[T5]{fontenc} 
+\usepackage[vietnamese,english]{babel}
+
+\usepackage{geometry}
+\geometry{
+  a4paper,
+  left=15mm,
+  right=15mm,
+  top=15mm,
+  bottom=15mm,
+}
+\usepackage{bookmark}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=black,
+    filecolor=black,      
+    urlcolor=black,
+}
+
+% Custom section formatting - Keep it simple for ATS parsing
+\usepackage{titlesec}
+\titleformat{\section}{\Large\bfseries\uppercase}{}{0em}{}[\titlerule]
+\titlespacing{\section}{0pt}{12pt}{8pt}
+
+\pagestyle{empty} % No page numbers for a clean CV
+
+\begin{document}
+
+% ATS Tip: Keep the header simple. Centered text is fine, but avoid complex tables.
+\begin{center}
+    {\Huge \textbf{Nguyễn Khắc Trung Kiên}} \\ \vspace{5pt}
+    AI/ML Engineer \& Researcher \\ \vspace{2pt}
+    \href{mailto:nktrungkien@protonmail.com}{nktrungkien@protonmail.com} \quad|\quad
+    \href{https://github.com/KNN-07}{github.com/KNN-07} \quad|\quad
+    \href{https://codeforces.com/profile/normankr07}{codeforces.com/profile/normankr07}
+\end{center}
+
+\vspace{-10pt}
+
+\section{Education}
+\noindent \textbf{VNU University of Engineering and Technology} \hfill 2025 -- Present\\
+Undergraduate in Artificial Intelligence\\
+\textit{Specializing in AI, Machine Learning, and Computer Vision}
+
+\vspace{5pt}
+
+\noindent \textbf{Hanoi University of Education High School for the Gifted} \hfill 2022 -- 2025\\
+High School Diploma (Informatics)
+
+\section{Experience}
+\noindent \textbf{UET Research Lab} \hfill Aug 2025 -- Present\\
+\textit{AI Research Assistant}
+\begin{itemize}[leftmargin=*, parsep=0pt, itemsep=2pt, topsep=2pt]
+    \item Building foundational knowledge in Machine Learning, Computer Vision, and Natural Language Processing.
+\end{itemize}
+
+\vspace{5pt}
+
+\noindent \textbf{HNUE, HSGS} \hfill Sep 2025 -- Present\\
+\textit{Teaching Assistant for AI Team}
+\begin{itemize}[leftmargin=*, parsep=0pt, itemsep=2pt, topsep=2pt]
+    \item Mentoring high school students in AI Basics, enhancing communication and public speaking skills.
+\end{itemize}
+
+\vspace{5pt}
+
+\noindent \textbf{SkillPixel} \hfill Sep 2025 -- Dec 2025\\
+\textit{SkillPixel Instructor}
+\begin{itemize}[leftmargin=*, parsep=0pt, itemsep=2pt, topsep=2pt]
+    \item Trained students in preparation for AI Olympiad competitions, developed curriculum and mentoring materials.
+\end{itemize}
+
+\vspace{5pt}
+
+\noindent \textbf{Narobit} \hfill Aug 2025\\
+\textit{Narobit Internship - R\&D Department}
+\begin{itemize}[leftmargin=*, parsep=0pt, itemsep=2pt, topsep=2pt]
+    \item Developed Computer Vision System for industrial settings focusing on defect and anomaly detection.
+\end{itemize}
+
+\section{Projects}
+\noindent \textbf{OpenPrism Labs} \hfill \href{https://github.com/OpenPrism-Labs}{github.com/OpenPrism-Labs}\\
+\textit{Open-source Research Organization}\\
+Explore projects, research, and tools on the GitHub organization.
+
+\vspace{5pt}
+
+\noindent \textbf{ZenFocus} \hfill \href{https://github.com/LunarithmAI/ZenFocus}{github.com/LunarithmAI/ZenFocus}\\
+A high-fidelity Pomodoro timer with themes, embedded media, and AI-assisted task breakdown.
+
+\vspace{5pt}
+
+\noindent \textbf{LumifaceWeb} \hfill \href{https://github.com/LunarithmAI/LumifaceWeb}{github.com/LunarithmAI/LumifaceWeb}\\
+VLM Beauty Analysis (web version, fully featured app version later).
+
+\vspace{5pt}
+
+\noindent \textbf{FaceLogix} \hfill \href{https://github.com/LunarithmAI/FaceLogix}{github.com/LunarithmAI/FaceLogix}\\
+Smart, secure face recognition attendance system.
+
+\section{Honors \& Awards}
+\begin{itemize}[leftmargin=*, parsep=0pt, itemsep=2pt, topsep=2pt]
+    \item \textbf{First Prize} -- National AI Olympiad for High School Students (VOAI 2025) \hfill 2025
+    \item \textbf{Bronze Medal} -- International Olympiad in Artificial Intelligence (IOAI 2025), China \hfill 2025
+    \item \textbf{26th Place} -- ICPC Asia Ho Chi Minh City Regional Contest \hfill 2025
+    \item \textbf{32nd Place} -- ICPC Vietnam National Programming Contest \hfill 2025
+\end{itemize}
+
+\section{Background \& Soft Skills}
+\begin{itemize}[leftmargin=*, parsep=0pt, itemsep=2pt, topsep=2pt]
+    \item Competitive Programmer. Foundational skills in Web Development and Cybersecurity.
+    \item Studying Digital Arts, Anime/VFX Editor, and enthusiast in multimedia processing. 
+    \item Languages: Vietnamese (Native), English (Proficient).
+\end{itemize}
+
+\end{document}
