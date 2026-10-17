@@ -4,16 +4,21 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Nguyễn Khắc Trung Kiên (Norman) — AI engineer and researcher, ASEAN Undergraduate Scholar and Turing AI Scholar at NTU Singapore. Research, open-source projects, and academic background.">
-  <meta name="theme-color" content="#faf9f6">
+  <meta name="theme-color" content="#faf9f6" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#191c21" media="(prefers-color-scheme: dark)">
   <meta property="og:title" content="Nguyễn Khắc Trung Kiên · Research & Engineering">
   <meta property="og:description" content="AI research, open-source engineering, and education. ASEAN Undergraduate Scholar & Turing AI Scholar at NTU Singapore.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://knn-07.github.io/">
   <link rel="canonical" href="https://knn-07.github.io/">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&display=swap">
   <link rel="stylesheet" href="css/style.css">
   <script src="js/theme.js"></script>
   <script src="js/site.js" defer></script>
+  <script src="js/motion.js" type="module"></script>
   <title>Nguyễn Khắc Trung Kiên · Research & Engineering</title>
 </head>
 <body>
@@ -40,7 +45,7 @@
     <section id="about" class="intro" aria-labelledby="profile-name">
       <div class="intro-copy">
         <p class="eyebrow">AI engineering · Research · Open source</p>
-        <h1 id="profile-name">Nguyễn Khắc<br>Trung Kiên<span class="name-dot">.</span></h1>
+        <h1 id="profile-name" lang="vi"><span class="word">Nguyễn</span> <span class="word">Khắc</span><br><span class="word">Trung</span> <span class="word">Kiên</span><span class="name-dot">.</span></h1>
         <p class="name-note">Also known as <strong>Norman</strong> <span aria-hidden="true">/</span> N. K. Trung Kien</p>
         <p class="lead">Exploring intelligence.<br>Building in the open.</p>
         <p>I’m an AI engineer and researcher pursuing Data Science and Artificial Intelligence at <a href="https://www.ntu.edu.sg/">Nanyang Technological University, Singapore</a>, as an <strong>ASEAN Undergraduate Scholar</strong> and <strong>Turing AI Scholar (TAISP)</strong>.</p>
@@ -52,7 +57,7 @@
         </div>
       </div>
       <aside class="profile-aside" aria-label="At a glance">
-        <div class="monogram" aria-hidden="true"><span>nk.</span><svg viewBox="0 0 240 240" fill="none"><circle cx="120" cy="120" r="94"/><ellipse cx="120" cy="120" rx="94" ry="38" transform="rotate(-35 120 120)"/><ellipse cx="120" cy="120" rx="94" ry="38" transform="rotate(35 120 120)"/><circle class="orbit-dot" cx="197" cy="66" r="5"/></svg></div>
+        <div class="monogram" aria-hidden="true"><span>nk.</span><svg viewBox="0 0 240 240" fill="none"><circle class="ring" cx="120" cy="120" r="94"/><g transform="rotate(35 120 120)"><path class="ring" d="M26 120a94 38 0 1 0 188 0a94 38 0 1 0-188 0"/></g><g transform="rotate(-35 120 120)"><path class="ring orbit-path" d="M214 120a94 38 0 1 0-188 0a94 38 0 1 0 188 0"/><circle class="orbit-dot" cx="214" cy="120" r="5"/></g></svg></div>
         <p class="aside-label">Currently</p>
         <p class="affiliation">Nanyang Technological<br>University</p>
         <p class="muted">Data Science & Artificial Intelligence<br>Singapore</p>
@@ -158,6 +163,6 @@ npm install && npm run dev</code></pre></div></details>
       </div>
     </section>
   </main>
-  <footer class="site-footer"><div><span>© 2026 Nguyễn Khắc Trung Kiên</span><span>Built with curiosity. Shared in the open.</span><a href="#about">Back to top ↑</a></div></footer>
+  <footer class="site-footer"><div><span>© 2026 <span lang="vi">Nguyễn Khắc Trung Kiên</span></span><span>Built with curiosity. Shared in the open.</span><a href="#about">Back to top ↑</a></div></footer>
 </body>
 </html>

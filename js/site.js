@@ -17,6 +17,7 @@ const sections = navigationLinks.map(link => document.querySelector(link.hash));
 
 // Native anchors handle navigation, deep links, and history even without JavaScript.
 // Only the visual current-section indicator needs scroll tracking.
+let currentSection = null;
 function updateCurrentSection() {
   const offset = document.querySelector('.site-header').offsetHeight + 45;
   let current = sections[0];
@@ -26,10 +27,13 @@ function updateCurrentSection() {
   if (window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 2) {
     current = sections[sections.length - 1];
   }
+  if (current === currentSection) return;
+  currentSection = current;
   for (const link of navigationLinks) {
     if (link.hash === `#${current.id}`) link.setAttribute('aria-current', 'location');
     else link.removeAttribute('aria-current');
   }
+  document.dispatchEvent(new CustomEvent('sectionchange'));
 }
 let scheduled = false;
 function scheduleNavigationUpdate() {
